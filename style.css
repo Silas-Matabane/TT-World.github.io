@@ -4,21 +4,27 @@ body {
 header{
     font-family:monospace;
     /*background-color:lightgoldenrodyellow;*/
-    border-style:solid;
-    border-style: ridge;
+    
+    /*border-style: ridge;*/
     border-radius: 6px;
-    display: flex;
-    flex-direction: column;
+    text-align:center;
+   
+   
+   
     
 }
 
 .WelcomeText{
-    background-color: white;
+    
+    font-size:xx-large;
+    
+    
+   
 
 }
 .nameText{
     
     font-size:x-large;
     font-style:italic;
-    background-color: white;
+  
 }
