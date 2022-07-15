@@ -555,7 +555,8 @@ h3.hello span{
 .contact .contact-info-item{
     flex: 0 0 25%;
     max-width: 25%;
-    text-align: center;    
+    text-align: center;
+    margin-bottom: 60px;
 }
 .contact .contact-info-item .icon {
     display: inline-block;
@@ -571,4 +572,9 @@ h3.hello span{
     text-transform: capitalize;
     margin: 15px 0 5px;
 }
-/*2:03:00*/
+.contact .contact-info-item p{
+    font-size: 16px;
+    line-height: 25px;
+    color: var(--text-black-700);
+    font-weight: 400;
+}
