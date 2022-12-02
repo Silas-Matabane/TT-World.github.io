@@ -273,7 +273,8 @@ h3.hello span{
 
 }
 .home .home-img img{
-    height: 400px;
+    height: 420px;
+    width: 370px;
     margin: auto;
     border-radius: 5px;
 }
