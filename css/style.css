@@ -273,32 +273,12 @@ h3.hello span{
 
 }
 .home .home-img img{
-    height: 420px;
+    height: 405px;
     width: 385px;
     margin: auto;
-    border-radius: 5px;
+    border-radius: 3px;
 }
-.home-img::before{
-    content: '';
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-top: 10px solid var(--skin-color);
-    border-left: 10px solid var(--skin-color);
-    left: 20px;
-    top: -40px;
 
-}
-.home-img::after{
-    content: '';
-    position: absolute;
-    height: 80px;
-    width: 80px;
-    border-bottom: 10px solid var(--skin-color);
-    border-right: 10px solid var(--skin-color);
-    right: 20px;
-    bottom: -40px;
-}
 
 /* About */
 .about .about-content{
@@ -319,7 +299,7 @@ h3.hello span{
     color: var(--skin-color);
 }
 .about .about-content .about-text p{
-    font-size: 16px;
+    font-size: 18px;
     line-height: 25px;
     color: var(--text-black-700);
 }
@@ -337,7 +317,7 @@ h3.hello span{
 .about .about-content .personal-info .info-item p{
     font-weight: 600;
     padding: 10px;
-    font-size: 16px;
+    font-size: 17px;
     color: var(--text-black-900);
     border-bottom: 1px solid var(--bg-black-50);
       
@@ -375,7 +355,7 @@ h3.hello span{
     background-color: var(--bg-black-50);
     height: 7px;
     border-radius: 4px;
-    width: 100px;
+    width: 250px;
     position: relative;
 }
 .about .about-content .skills .skill-item{
@@ -401,7 +381,7 @@ h3.hello span{
     color: var(--text-black-700);
     background-color: var(--bg-black-100);
     font-weight: 500;
-    font-size: 16px;
+    font-size: 17px;
     
 }
 .about .about-content .education,
