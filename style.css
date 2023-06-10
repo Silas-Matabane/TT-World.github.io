@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Find a way to use variables  in your code
+    --variable-name: value;
+    eg: background-color: var(--variable-name);
+    */
+body{
+    font-family: 'Rubik', sans-serif;   
+}
+.navigation-buttons{
+    margin-top: 30px;
+    margin-bottom: 25px;
+    
+}
+.navigation-buttons .list-buttons{
+    display: flex;
+    flex-direction: row;
+}
+.btn a{
+    text-decoration: none;
+    color: black;
+}
+.btn{
+    margin: 5px auto;
+    padding: 5px;
+    font-size: 25px;
+    border-radius: 4px;
+    font-family: 'Allura', cursive;
+    box-shadow: 3px 3px 1px #888888;
+    color: black;
+    width: 200px;
+    text-align: center;
+}
+.list-buttons{
+    display: flex;  
+    align-items: center;   
+    justify-content: center;   
+    padding: 5px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    /*border-bottom: 1px solid  #888888;*/
+}
+.navigation{
+    /*position: fixed;*/
+    display: flex;  
+    align-items: center;   
+    justify-content: center;   
+    padding: 5px;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    margin-top: 100px;
+    margin-bottom: 100px;   
+}
+.my-name{    
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Allura', cursive;   
+    padding: 30px; 
+}
+.my-name p:first-child{
+    text-shadow: 2px 2px 1px  #888888;
+    
+}
+.about-me-intro{
+    margin-top: 10px;
+    font-size:medium;
+    font-family: 'Courier New', Courier, monospace;
+}
+.profile-image{
+    display: flex;
+    width: 192px;
+    height: 192px;
+    border-radius: 50%;
+    border: 2px solid black;
+    align-items: center;
+    justify-content: center; 
+}
+.profile-pic{
+    position: relative;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%; 
+    box-shadow: 4px 4px 4px #888888; 
+}
+/*------------------------------Personal Details Section---------------------------------*/
+.my-titles{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+.details-box{
+    display: flex;    
+    border-radius: 2px;
+    align-items: center;
+    justify-content:center;
+    flex-direction: row;
+    margin: auto; 
+}
+.personal-details{
+    display: flex;
+    width: 400px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;    
+    border-radius: 4px;
+    margin: 10px;   
+    padding: 5px;  
+    box-shadow: 5px 5px 3px #888888;
+}
+.personal-details span{
+    font-weight: bold;
+}
+.about-section{
+    position: relative;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+.part1{
+   
+    margin: 5px 60px 5px;
+}
+.detailed-info{
+    
+    text-align: center;
+    font-family: 'Allura', cursive;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-size: 50px;
+    text-shadow: 2px 2px 1px  #888888;    
+}
+.part2{
+    
+    margin: 5px;
+}
+/*----------------------------Education section-----------------------*/
+hr{
+    margin: 20px 10%;
+}
+
+ .education-section{
+    margin-top: 30px;
+    margin-bottom: 15px;
+ }
+ .highSchool-details, .varsity-details{
+    align-items: center;
+    width: 400px;
+    border-radius: 4px;
+    margin: 10px;   
+    padding: 5px;  
+    box-shadow: 5px 5px 3px #888888;
+ }
+ /*.highSchool-details li, .varsity-details li{
+    list-style-type: none;
+ }*/
+ .highSchool-details .subjects-passed, .varsity-details .subjects-passed{
+    
+    margin-left: 30px;
+ }
+ /*-------------------------------Experience Section---------------------*/
+ .experience-section{
+    margin-top: 60px;
+    margin-bottom: 60px;
+ }
+ .experience-details{
+    align-items: center;
+    width: 600px;
+    border-radius: 4px;
+    margin: 10px;   
+    padding: 5px;  
+    box-shadow: 5px 5px 3px #888888;
+ }
+ .experience-details .subjects-passed{
+    margin-left: 30px;
+ }
+ /*---------------------------------CONTACT SECTION---------------------*/
+ .contact-section{
+    margin-top: 60px;
+    margin-bottom: 60px;
+ }
+ .part1 .contact-details,  .part2 .contact-details{
+    align-items: center;    
+    width: 450px;
+    border-radius: 4px;
+    margin: 10px;   
+    padding: 5px;  
+    box-shadow: 5px 5px 3px #888888;
+ }
+ .contact-details{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+ }
