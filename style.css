@@ -11,8 +11,14 @@ body{
     font-family: 'Rubik', sans-serif;   
 }
 .navigation-buttons{
+    /*position: fixed;
+    top: 0;
+    width: 100%;*/
+   
     margin-top: 30px;
     margin-bottom: 25px;
+  
+    z-index: 100;
     
 }
 .navigation-buttons .list-buttons{
@@ -32,14 +38,16 @@ body{
     box-shadow: 3px 3px 1px #888888;
     color: black;
     width: 200px;
+    height: 35px;
     text-align: center;
+    background-color:beige;
 }
 .list-buttons{
     display: flex;  
     align-items: center;   
     justify-content: center;   
     padding: 5px;
-    width: 70%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 20px;
@@ -89,6 +97,9 @@ body{
     box-shadow: 4px 4px 4px #888888; 
 }
 /*------------------------------Personal Details Section---------------------------------*/
+.education-section{
+    z-index: -1;
+}
 .my-titles{
     font-size: 20px;
     font-weight: 600;
@@ -103,6 +114,7 @@ body{
     margin: auto; 
 }
 .personal-details{
+    background-color:beige;
     display: flex;
     width: 400px;
     height: 35px;
@@ -123,6 +135,7 @@ body{
     width: 100%;
     margin-right: auto;
     margin-left: auto;
+    
     
 }
 .part1{
@@ -158,6 +171,7 @@ hr{
     margin: 10px;   
     padding: 5px;  
     box-shadow: 5px 5px 3px #888888;
+    background-color:beige;
  }
  /*.highSchool-details li, .varsity-details li{
     list-style-type: none;
@@ -178,10 +192,15 @@ hr{
     margin: 10px;   
     padding: 5px;  
     box-shadow: 5px 5px 3px #888888;
+    background-color:beige;
  }
  .experience-details .subjects-passed{
     margin-left: 30px;
  }
+ 
+
+
+
  /*---------------------------------CONTACT SECTION---------------------*/
  .contact-section{
     margin-top: 60px;
@@ -194,6 +213,7 @@ hr{
     margin: 10px;   
     padding: 5px;  
     box-shadow: 5px 5px 3px #888888;
+    background-color:beige;
  }
  .contact-details{
     display: flex;

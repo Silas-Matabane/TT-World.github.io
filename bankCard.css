@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Find a way to use variables  in your code
+    --variable-name: value;
+    eg: background-color: var(--variable-name);
+    */
+body{
+    font-family: 'Rubik', sans-serif;   
+}
+.project-section{
+    
+}
+
+.project-details{
+    align-items: center;    
+    width: 250px;
+    border-radius: 4px;
+    margin: 0px 2px 0px 2px;       
+    box-shadow: 5px 5px 3px #888888;
+    font-size: 15px;
+    padding-bottom: 4px;
+    background-color:beige;
+    
+
+}
+.project-details  span{
+    font-weight: bold;
+}
+.project-details  p{
+   
+    
+}
+.bank-card{
+    border-radius: 4px 4px 0 0;
+
+}
+.bank-card-photo{
+    border-radius: 4px 4px 0 0;
+    width: 250px;
+}
+.details-box{
+   
+}
+.part1{
+  margin: 10px;
+  
+}
