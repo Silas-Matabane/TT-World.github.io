@@ -281,6 +281,56 @@ hr{
  .experience-details .subjects-passed{
     margin-left: 30px;
  }
+ /*----------------CERTIFICATIONS AND BADGES SECTION  DETAILS SECTION STARTS---------------------------*/
+
+
+
+
+ /*----------------CERTIFICATIONS AND BADGES SECTION  DETAILS SECTION ENDS------------------------------*/
+
+.certificates-section{
+
+
+}
+.certificate{
+    width: 190px;
+    height: 230px;
+    align-items: center;
+    border-radius: 4px;
+    margin: 7px; 
+    box-shadow: 5px 5px 3px #888888;
+    background-color:var(--theme-color1);
+    
+}
+.cert-photos,img{
+    width: 190px;
+    height: 60px;
+    border-radius: 4px 4px 0 0;
+   
+}
+.certificate p{
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+.certificate span{
+    font-weight: bold;
+
+}
+.ibm img{
+   
+    width: 100px;
+    margin-left: 45px;
+}
+.details-box a{
+    text-decoration: none;
+    color: initial;
+}
+
+
+
+
  /*---------------------------------CONTACT SECTION---------------------*/
  .contact-section{
     
