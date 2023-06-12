@@ -233,9 +233,11 @@ hr{
     font-weight: bold;
     
 }
+
 .bank-card-photo{
     border-radius: 4px 4px 0 0;
     width: 250px;
+    height: 190px;
 }
 .guitar-photo{
     border-radius: 4px 4px 0 0;
