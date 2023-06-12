@@ -1,5 +1,5 @@
 :root{
-    --theme-color1: beige;
+    --theme-color1: white;
     background-color:beige;
     
 }
@@ -365,14 +365,21 @@ hr{
     margin-left: 5px;
 }
 .uipathPhoto img{
-    width: 150px;
-    height: 20px;
+   
+    width: 120px;
+    margin-left: 34px;
 }
 .ibm img{
    
-    width: 100px;
-    margin-left: 45px;
-    background-color: black;
+    width: 64px;
+    margin-left: 55px;
+    
+}
+.soloPhoto img{
+    width: 32%;
+    border-radius: 50%;
+    margin-left: 60px;
+   
 }
 .details-box a{
     text-decoration: none;
