@@ -187,18 +187,45 @@ hr{
 
  .varsity-details p{
     margin: 3px;
+ }
+ .varsity-details img{
+    width: 35px;
+    height: 35px;
+    border-radius: 30%;
+  
+ }
+ .varsity-details .name-logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ .name-logo{
+    margin-left: 25%;
+    margin-right: 25%;
+ }
+ 
 
+ .highSchool-details img{
+    width: 35px;
+    height: 35px;
+    border-radius: 30%;
+   
  }
  .highSchool-details p{
     margin: 3px;
 
+ }
+ .highSchool-details .name-logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
  }
  .highSchool-details, .varsity-details{
     align-items: center;
     width: 400px;
     border-radius: 4px;
     margin: 10px;   
-    padding: 5px;  
+    padding: 10px 5px 10px 5px;  
     box-shadow: 5px 5px 3px #888888;
     background-color:var(--theme-color1);
  }
