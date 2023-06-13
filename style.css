@@ -450,7 +450,7 @@ hr{
         width: auto;
     }
     .my-name{
-        margin-top: 10px;
+        margin-top: 30px;
         width: 350px; 
         font-size: 50px;
     }
@@ -459,19 +459,51 @@ hr{
         height: 260px;
         display: flex;
         flex-direction: column;
-        margin-top: 0px;
-        padding-top: 0px;
+        margin-top: 20px;
+       
     }
     .profile-image{
         visibility: hidden;
     }
+
+
+
+
+
+
+
+
+
     .social-media-platforms{
-        margin-top: 200px;
+        margin-top: 250px;
+      
+        
     }
     hr{
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
+    .icon{
+        
+        font-size: 25px;
+    }
+    .icon a{
+        margin: -10px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     .detailed-info{
         font-size: 45px;
     }
@@ -487,6 +519,32 @@ hr{
         flex-direction: column;
         justify-content: center;
     }
+
+
+
+
+    .education-section, .details-box{
+        width: 10px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .experience-section{
+        width: 50px;
+    }
+    .details-box > .part1{
+        background-color: yellowgreen;
+       
+    }
+    .part1, .contact-details p{
+        position: relative;
+        background-color: #888888;
+      
+     
+       
+    }
+  
+   
+  
     
    
     
