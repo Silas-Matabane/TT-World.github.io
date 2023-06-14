@@ -3,116 +3,131 @@
  
     
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 /*Find a way to use variables  in your code
     --variable-name: value;
     eg: background-color: var(--variable-name);
     */
-body{
-    font-family: 'Rubik', sans-serif;   
+body{ 
     background-color: whitesmoke;
 }
 
 
 /*---------------------------------TOP NAVIGATION BAR START------------------------------*/
-.navigation-buttons{
-    /*position: fixed;
-    top: 0;
-    width: 100%;*/   
-    margin-top: 8px;
-    margin-bottom: 15px;
+section{
+    margin-top: 150px;
+    margin-bottom: 50px;
+    
+      
 }
-.navigation-buttons .list-buttons{
-    display: flex;
-    flex-direction: row;
-}
-.btn a{
-    text-decoration: none;
-    color: black;
-}
-.btn{
-    margin: 5px auto;
-    padding: 5px;
-    font-size: 25px;
-    border-radius: 4px;
-    font-family: 'Allura', cursive;
-    box-shadow: 3px 3px 1px #888888;
-    color: black;
-    width: 190px;
-    height: 35px;
-    text-align: center;
-    background-color:var(--theme-color1);
-}
-.list-buttons{
-    display: flex;  
-    align-items: center;   
-    justify-content: center;   
-    padding: 5px;
-    width: 80%;
+nav{
+    width: 1250px;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     
-    /*border-bottom: 1px solid  #888888;*/
+    
 }
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+}
+nav li {
+    display: inline;
+  }
+nav a {
+    display: block;
+    
+    text-decoration: none;
+  }
+.top-heading a {
+    color: black;
+}
+.top-heading{
+    text-align: center;
+    width: 300px;
+    border-radius: 4px;
+    background-color:var(--theme-color1);
+    font-family: 'Rampart One', cursive;
+    font-size: 30px;
+   
+    
+}
+
 /*---------------------------------TOP NAVIGATION BAR ENDS------------------------------*/
 
 
 
 
+
+
+
 /*-----------------------------------HEADER BAR STARS---------------------------------*/
-
-.navigation{
-    /*position: fixed;*/
-    display: flex;  
-    align-items: center;   
-    justify-content: center;   
-    width: 100%;
-    top: 0;
-    z-index: 100;
-    margin-top: 90px;  
-}
-.my-name p{
+header{
     
-    padding-top: 8px;
 }
-.my-name{    
-    text-align: center;
-    font-size: 60px;
-    font-family: 'Allura', cursive;
-}
-.my-name p:first-child{
-    text-shadow: 2px 2px 1px  #888888;
-}
-.about-me-intro{
-    margin-top: 10px;
-    font-size:medium;
-    font-family: 'Courier New', Courier, monospace;
-}
-.profile-image{
-    display: flex;
-    width: 192px;
-    height: 192px;
-    border-radius: 50%;
-    border: 2px solid black; 
-    align-items: center;
-    justify-content: center; 
-}
-.profile-pic{
+.header-content{
     position: relative;
-    width: 190px;
-    height: 190px;
-    border-radius: 50%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1200px;
+    height: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    justify-content: space-around;
+}
+.my-picture{
+    display: flex;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
     box-shadow: 4px 4px 4px #888888; 
+    margin-top: 60px;
+}
+.aboutMe-text-content{
+    width: auto;
+    width: 900px;
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+}
+.aboutMe-text-content h1{
+    position: relative;
+    font-family: 'Allura', cursive;
+    font-size: 70px;
+    text-align: center;
+    text-shadow: 2px 2px 1px  #888888;
+    width: 610px;
+}
+.aboutMe-text-content h3{
+    width: 615px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+.aboutMe-text-content p{
+    width: 615px;
+}
+.aboutMe-text-content h3 p{
+    position: relative;
+    margin-top: 10px;
+    font-size: large;
 }
 
-.from-header, .icon{
-    margin-left: 5px;
-    margin-right: 5px;
-
+.header-icon a{
+    color: black;
+    margin-left: 15px;
+    margin-right: 15px;
+    
+    
+}
+.icon-buttons.top{
+    margin-top: -35px;
+    margin-bottom: 20px;
 }
 /*-----------------------------------HEADER BAR ENDS---------------------------------*/
 
@@ -120,171 +135,147 @@ body{
 
 
 
-/*------------------------------About Details Section aStart---------------------------------*/
-.about-section{
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-}
-.my-titles{
-    font-size: 20px;
-    font-weight: 600;
-    font-family: 'Courier New', Courier, monospace;
-}
-.details-box{
-    display: flex;    
-    border-radius: 2px;
-    align-items: center;
-    justify-content:center;
-    flex-direction: row;
-    margin: auto; 
-}
+/*------------------------------Personal Details Section Start---------------------------------*/
 .personal-details{
-    background-color:var(--theme-color1);
-    display: flex;
-    width: 400px;
-    height: 35px;
-    align-items: center;
-    justify-content: center;    
-    border-radius: 4px;
-    margin: 10px;   
-    padding: 5px;  
-    box-shadow: 5px 5px 3px #888888;
-}
-.personal-details span{
-    font-weight: bold;
-}
 
-.part1{
-    margin: 5px 60px 5px;
+    
 }
-.detailed-info{    
+.personal-details h2{
     text-align: center;
     font-family: 'Allura', cursive;
-    font-size: 50px;
-    text-shadow: 2px 2px 1px  #888888;
-    margin-bottom: 45px;    
+    font-size: 45px;
+    margin-bottom: 50px;
 }
-.part2{
-    
+.pd-container{
+    display: flex;
+    justify-content: center;
+}
+.pd-right,
+.pd-left{
     margin: 5px;
+    
 }
-hr{
-    margin-left:  5%;
-    margin-right:  5%;
-    margin-top: 65px;
-    margin-bottom: 65px;
+
+.pd-theme{
+    display: flex;
+    width: 500px;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px; 
+    box-shadow: 5px 5px 3px #888888;
+    background-color:var(--theme-color1);
+    
 }
-/*------------------------------About Details Section End---------------------------------*/
+
+
+/*------------------------------Personal Details Section End---------------------------------*/
 
 
 
 
 /*----------------------------Education section Start-----------------------*/
- .education-section{}
-
- .varsity-details p{
-    margin: 3px;
- }
- .varsity-details img{
-    width: 35px;
-    height: 35px;
-    border-radius: 30%;
-  
- }
- .varsity-details .name-logo{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
- }
- .name-logo{
-    margin-left: 25%;
-    margin-right: 25%;
- }
- 
-
- .highSchool-details img{
-    width: 35px;
-    height: 35px;
-    border-radius: 30%;
+.education{
+    position: relative;
+    height: 450px;
+    
+}
+.education h2{
+    text-align: center;
+    font-family: 'Allura', cursive;
+    font-size: 45px;
+    margin-bottom: 50px;
    
- }
- .highSchool-details p{
-    margin: 3px;
-
- }
- .highSchool-details .name-logo{
+}
+.education-container{
+    position: relative;
     display: flex;
+    justify-content: center;
+}
+.university,
+.high-school{
+    text-align: center;
     align-items: center;
-    justify-content: space-between;
- }
- .highSchool-details, .varsity-details{
-    align-items: center;
-    width: 400px;
-    border-radius: 4px;
-    margin: 10px;   
-    padding: 10px 5px 10px 5px;  
+    width: 500px;
+    margin: 5px;
+    /*padding-left: 100px;*/
+    border-radius: 4px;  
     box-shadow: 5px 5px 3px #888888;
     background-color:var(--theme-color1);
- }
- /*.highSchool-details li, .varsity-details li{
-    list-style-type: none;
- }*/
- .highSchool-details .subjects-passed, .varsity-details .subjects-passed{
     
-    margin-left: 30px;
- }
+}
+.high-school li,
+.university li{
+    list-style: none;
+}
+.varsityLogo,
+  .highSchoolLogo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 60px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .varsityLogo img,
+  .highSchoolLogo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .university h4,
+  .high-school h4 {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  .university h3,
+  .high-school h3 {
+    font-size: 20px;
+   
+  }
+  .liner-nwu
+  {
+    border: none;
+    background-color: purple;
+    height: 1px;
+    margin: 15px 5%;
+  }
+  .liner-derek
+  {
+    border: none;
+    background-color: rgb(4, 68, 4);
+    height: 1px;
+    margin: 15px 5%;
+  }
+  
  /*----------------------------Education section Ends-----------------------*/
 
 
 
  /*----------------------------Projects section Start-----------------------*/ 
- .project-details{
-    align-items: center;
-    width: 250px;
-    border-radius: 4px;
-    margin: 10px; 
-    box-shadow: 5px 5px 3px #888888;
-    background-color:var(--theme-color1);
-}
-.project-details  p{
+ 
 
-    text-align: center; 
-    font-size: 15px;
-    padding: 3px;
-    
-}
-.project-details span{
-    font-weight: bold;
-    
-}
 
-.bank-card-photo{
-    border-radius: 4px 4px 0 0;
-    width: 250px;
-    height: 190px;
-}
-.guitar-photo{
-    border-radius: 4px 4px 0 0;
-    width: 250px;
-}
 
-.project1, .project-details{
-    height: 260px;
-    
-}
-.project2, .project-details{
-    height: 260px;
-  
-}
-.guitar-photo{
-    height: 192px;
 
-}
-.part1{
-    margin-left: 5px;
-    margin-right: 5px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*----------------------------Projects section Ends-----------------------*/ 
 
@@ -293,127 +284,156 @@ hr{
 
 
  /*-------------------------------Experience Section---------------------*/
- .experience-section{
+ .experience{
     
  }
- .experience-details{
+ .experience h2{
+    text-align: center;
+    font-family: 'Allura', cursive;
+    font-size: 45px;
+    margin-bottom: 50px;
+  
+ }
+ .experience-container{
+    height: 300px;
+ }
+
+
+ .experience-theme{
     align-items: center;
-    width: 600px;
+    text-align: center;
+    width: 1000px;
     border-radius: 4px;
-    margin: 10px;   
-    padding: 5px;  
+    margin-left: auto;
+    margin-right: auto;  
     box-shadow: 5px 5px 3px #888888;
     background-color:var(--theme-color1);
  }
- .experience-details .subjects-passed{
-    margin-left: 30px;
+ .experience-theme h3{
+    font-size: 20px;
  }
+ .experience-theme h5{
+    font-size: 17px;
+ }
+ .exp1 li{
+    list-style: none;
+    
+ }
+ .exp1{
+    padding: 5px;
+ }
+
  /*----------------CERTIFICATIONS AND BADGES SECTION  DETAILS SECTION STARTS---------------------------*/
 
 
 
 
  /*----------------CERTIFICATIONS AND BADGES SECTION  DETAILS SECTION ENDS------------------------------*/
-
-.certificates-section{
-
+.certificates-badges{
+    
 
 }
-.certificate{
+ .certificates-badges h2{
+    text-align: center;
+    font-family: 'Allura', cursive;
+    font-size: 45px;
+    margin-bottom: 50px;
+}
+.certificates-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cert{
     width: 190px;
     height: 230px;
-    align-items: center;
+    text-align: center;
     border-radius: 4px;
-    margin: 10px; 
-    box-shadow: 5px 5px 3px #888888;
+    box-shadow: 3px 3px 1px #888888;
     background-color:var(--theme-color1);
-    
+    margin: 5px; 
 }
-.cert-photos,img{
+.cert a{
+    color: black;
+    text-decoration: none;
+}
+.cert img{
     width: 190px;
     height: 60px;
     border-radius: 4px 4px 0 0;
-    
-   
-}
-.cert-photos{
+    padding-bottom: 3px;
     border-bottom: 1px solid #888888;
-    height: 65px;
-   
 }
-.certificate p{
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
-
+.cert h3{
+    font-size: 16px;
+    padding-top: 5px;
 }
-.certificate span{
-    font-weight: bold;
-
+.certs-row1,
+.certs-row2,
+.certs-row3,
+.certs-row4,
+.certs-row5,
+.certs-row6{
+    display: flex;
+    justify-content: center;
 }
-.freecodecampPhoto img{
-    background-color: rgb(3, 3, 54);
-    width: 190px;
-    height: 64px;
-   
+.cert1 img{
+    background-color: rgb(8, 2, 56);
 }
-.masterPhoto img{
+.cert3 img{
     width: 180px;
     margin-right: 5px;
     margin-left: 5px;
 }
-.uipathPhoto img{
-   
+.cert4 img{
     width: 120px;
-    margin-left: 34px;
 }
 .ibm img{
-   
-    width: 64px;
-    margin-left: 55px;
-    
+    width: 64px;  
 }
 .soloPhoto img{
     width: 32%;
     border-radius: 50%;
-    margin-left: 60px;
-   
+    
 }
-.details-box a{
-    text-decoration: none;
-    color: initial;
-}
-
-
-
 
  /*---------------------------------CONTACT SECTION---------------------*/
- .contact-section{
-    
+ .contact h2{
+    text-align: center;
+    font-family: 'Allura', cursive;
+    font-size: 45px;
+    margin-bottom: 50px;
  }
- .part1 .contact-details,  .part2 .contact-details{
-    align-items: center;    
-    width: 450px;
-    border-radius: 4px;
-    margin: 10px;   
-    padding: 5px;  
+ .contact-container{
+    display: flex;
+    justify-content: center;
+ }
+ .contact-left,
+ .contact-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    text-align: center;
+    margin: 5px;
+ }
+ .cell,
+ .location,
+ .email,
+ .website{
+    width: 500px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     box-shadow: 5px 5px 3px #888888;
     background-color:var(--theme-color1);
+    border-radius: 4px;
+    
  }
- .contact-details{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10px;
+ .contact-left i,
+ .contact-right i{
+    font-size: 25px;
  }
- .web a{
-    text-decoration: none;
-    font-style: italic;
-    color: black;
-
-
- }
+ 
 /*-------------------------------------FOOTER-------------------------------*/
 .icon-buttons{
     display: flex;
