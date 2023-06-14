@@ -43,7 +43,7 @@ nav a {
     text-align: center;
     width: 300px;
     border-radius: 4px;
-    background-color:var(--theme-color1);
+    
     font-family: 'Rampart One', cursive;
     font-size: 30px;
 }
