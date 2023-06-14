@@ -16,16 +16,12 @@ body{
 section{
     margin-top: 150px;
     margin-bottom: 50px;
-    
-      
 }
 nav{
     width: 1250px;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    
-    
 }
 nav ul {
     display: flex;
@@ -37,10 +33,9 @@ nav li {
     display: inline;
   }
 nav a {
-    display: block;
-    
+    display: block;    
     text-decoration: none;
-  }
+}
 .top-heading a {
     color: black;
 }
@@ -51,8 +46,6 @@ nav a {
     background-color:var(--theme-color1);
     font-family: 'Rampart One', cursive;
     font-size: 30px;
-   
-    
 }
 
 /*---------------------------------TOP NAVIGATION BAR ENDS------------------------------*/
@@ -64,9 +57,7 @@ nav a {
 
 
 /*-----------------------------------HEADER BAR STARS---------------------------------*/
-header{
-    
-}
+
 .header-content{
     position: relative;
     display: flex;
@@ -136,10 +127,7 @@ header{
 
 
 /*------------------------------Personal Details Section Start---------------------------------*/
-.personal-details{
 
-    
-}
 .personal-details h2{
     text-align: center;
     font-family: 'Allura', cursive;
@@ -284,9 +272,7 @@ header{
 
 
  /*-------------------------------Experience Section---------------------*/
- .experience{
-    
- }
+
  .experience h2{
     text-align: center;
     font-family: 'Allura', cursive;
@@ -329,10 +315,7 @@ header{
 
 
  /*----------------CERTIFICATIONS AND BADGES SECTION  DETAILS SECTION ENDS------------------------------*/
-.certificates-badges{
-    
 
-}
  .certificates-badges h2{
     text-align: center;
     font-family: 'Allura', cursive;
