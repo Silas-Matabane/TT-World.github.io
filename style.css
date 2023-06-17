@@ -130,8 +130,9 @@ nav a {
 
 .personal-details h2{
     text-align: center;
-    font-family: 'Allura', cursive;
-    font-size: 45px;
+    /*font-family: 'Allura', cursive;*/
+    font-family: 'Rampart One', cursive;
+    font-size: 40px;
     margin-bottom: 50px;
 }
 .pd-container{
@@ -170,8 +171,9 @@ nav a {
 }
 .education h2{
     text-align: center;
-    font-family: 'Allura', cursive;
-    font-size: 45px;
+    /*font-family: 'Allura', cursive;*/
+    font-family: 'Rampart One', cursive;
+    font-size: 40px;
     margin-bottom: 50px;
    
 }
@@ -275,8 +277,9 @@ nav a {
 
  .experience h2{
     text-align: center;
-    font-family: 'Allura', cursive;
-    font-size: 45px;
+    /*font-family: 'Allura', cursive;*/
+    font-family: 'Rampart One', cursive;
+    font-size: 40px;
     margin-bottom: 50px;
   
  }
@@ -318,8 +321,9 @@ nav a {
 
  .certificates-badges h2{
     text-align: center;
-    font-family: 'Allura', cursive;
-    font-size: 45px;
+    /*font-family: 'Allura', cursive;*/
+    font-family: 'Rampart One', cursive;
+    font-size: 40px;
     margin-bottom: 50px;
 }
 .certificates-container{
@@ -384,7 +388,9 @@ nav a {
  .contact h2{
     text-align: center;
     font-family: 'Allura', cursive;
-    font-size: 45px;
+   /*font-family: 'Allura', cursive;*/
+   font-family: 'Rampart One', cursive;
+   font-size: 40px;
     margin-bottom: 50px;
  }
  .contact-container{
