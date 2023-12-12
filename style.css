@@ -134,6 +134,7 @@ nav a {
     font-family: 'Rampart One', cursive;
     font-size: 40px;
     margin-bottom: 50px;
+   
 }
 .pd-container{
     display: flex;
@@ -143,12 +144,13 @@ nav a {
 .pd-left{
     margin: 5px;
     
+    
 }
 
 .pd-theme{
     display: flex;
     width: 500px;
-    height: 70px;
+    height: 120px;
     justify-content: center;
     align-items: center;
     border-radius: 4px; 
@@ -281,22 +283,28 @@ nav a {
     font-family: 'Rampart One', cursive;
     font-size: 40px;
     margin-bottom: 50px;
-  
  }
  .experience-container{
     height: 300px;
+    display: flex;
+    justify-content: center;
  }
-
 
  .experience-theme{
     align-items: center;
     text-align: center;
-    width: 1000px;
     border-radius: 4px;
     margin-left: auto;
-    margin-right: auto;  
+    margin-right: auto;
     box-shadow: 5px 5px 3px #888888;
     background-color:var(--theme-color1);
+ }
+ .row1-experience, .exp1, .exp2{
+    width: 430px;
+    margin: 5px;
+ }
+ .experience-theme.exp2{
+    height: 281px;
  }
  .experience-theme h3{
     font-size: 20px;
@@ -304,11 +312,11 @@ nav a {
  .experience-theme h5{
     font-size: 17px;
  }
- .exp1 li{
+ .exp1, .exp2, li{
     list-style: none;
-    
  }
- .exp1{
+
+ .exp1 , .exp2{
     padding: 5px;
  }
 
@@ -380,8 +388,7 @@ nav a {
 }
 .soloPhoto img{
     width: 32%;
-    border-radius: 50%;
-    
+    border-radius: 50%;  
 }
 
  /*---------------------------------CONTACT SECTION---------------------*/
@@ -396,6 +403,7 @@ nav a {
  .contact-container{
     display: flex;
     justify-content: center;
+    
  }
  .contact-left,
  .contact-right{
@@ -416,6 +424,8 @@ nav a {
     box-shadow: 5px 5px 3px #888888;
     background-color:var(--theme-color1);
     border-radius: 4px;
+    height: 200px;
+    align-items: center;
     
  }
  .contact-left i,
@@ -469,24 +479,14 @@ nav a {
         display: flex;
         flex-direction: column;
         margin-top: 20px;
-       
     }
     .profile-image{
         visibility: hidden;
     }
 
-
-
-
-
-
-
-
-
     .social-media-platforms{
         margin-top: 250px;
       
-        
     }
     hr{
         margin-top: 50px;
@@ -499,19 +499,6 @@ nav a {
     .icon a{
         margin: -10px;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     .detailed-info{
         font-size: 45px;
@@ -529,9 +516,6 @@ nav a {
         justify-content: center;
     }
 
-
-
-
     .education-section, .details-box{
         width: 10px;
         margin-right: auto;
@@ -547,14 +531,8 @@ nav a {
     .part1, .contact-details p{
         position: relative;
         background-color: #888888;
-      
-     
        
     }
   
-   
-  
-    
-   
     
  }
