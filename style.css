@@ -320,12 +320,12 @@ nav a {
     padding: 5px;
  }
 
- /*----------------CERTIFICATIONS AND BADGES SECTION  DETAILS SECTION STARTS---------------------------*/
+ /*----------------Experience Section---------------------------*/
 
 
 
 
- /*----------------CERTIFICATIONS AND BADGES SECTION  DETAILS SECTION ENDS------------------------------*/
+ /*----------------CERTIFICATIONS AND BADGES SECTION  DETAILS SECTION------------------------------*/
 
  .certificates-badges h2{
     text-align: center;
@@ -374,6 +374,11 @@ nav a {
 }
 .cert1 img{
     background-color: rgb(8, 2, 56);
+}
+.cert2 img{
+    
+    width: 70px;
+
 }
 .cert3 img{
     width: 180px;
