@@ -37,9 +37,9 @@ nav a {
   font-size: 30px;
 }
 
-/*---------------------------------TOP NAVIGATION BAR ENDS------------------------------*/
+/*----------------TOP NAVIGATION BAR ENDS-----------------*/
 
-/*-----------------------------------HEADER BAR STARS---------------------------------*/
+/*---------------HEADER BAR STARS-------------------------*/
 
 .header-content {
   position: relative;
@@ -101,9 +101,9 @@ nav a {
   margin-top: -35px;
   margin-bottom: 20px;
 }
-/*-----------------------------------HEADER BAR ENDS---------------------------------*/
+/*--------------------HEADER BAR ENDS---------------------------*/
 
-/*------------------------------Personal Details Section Start---------------------------------*/
+/*---------------Personal Details Section Start----------------------*/
 
 .personal-details h2 {
   text-align: center;
@@ -132,9 +132,9 @@ nav a {
   background-color: var(--theme-color1);
 }
 
-/*------------------------------Personal Details Section End---------------------------------*/
+/*--------------Personal Details Section End-----------------------*/
 
-/*----------------------------Education section Start-----------------------*/
+/*------------------Education section Start-----------------------*/
 .education {
   position: relative;
   height: 450px;
