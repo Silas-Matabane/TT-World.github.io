@@ -1,543 +1,472 @@
-:root{
-    --theme-color1: white;
- 
-    
-}
-/*Find a way to use variables  in your code
-    --variable-name: value;
-    eg: background-color: var(--variable-name);
-    */
-body{ 
-    background-color: whitesmoke;
+:root {
 }
 
-
-/*---------------------------------TOP NAVIGATION BAR START------------------------------*/
-section{
-    margin-top: 150px;
-    margin-bottom: 50px;
+body {
 }
-nav{
-    width: 1250px;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
+
+/*----------TOP NAVIGATION BAR START------------------------------*/
+section {
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+nav {
+  margin-left: auto;
+  margin-right: auto;
 }
 nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    list-style-type: none;
-    padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 0;
 }
 nav li {
-    display: inline;
-  }
+  display: inline;
+}
 nav a {
-    display: block;    
-    text-decoration: none;
+  display: block;
+  text-decoration: none;
 }
 .top-heading a {
-    color: black;
+  color: black;
 }
-.top-heading{
-    text-align: center;
-    width: 300px;
-    border-radius: 4px;
-    
-    font-family: 'Rampart One', cursive;
-    font-size: 30px;
+.top-heading {
+  text-align: center;
+  width: 300px;
+  border-radius: 4px;
+  font-family: "Rampart One", cursive;
+  font-size: 30px;
 }
 
 /*---------------------------------TOP NAVIGATION BAR ENDS------------------------------*/
 
-
-
-
-
-
-
 /*-----------------------------------HEADER BAR STARS---------------------------------*/
 
-.header-content{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 1200px;
-    height: 450px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    justify-content: space-around;
+.header-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1200px;
+  height: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  justify-content: space-around;
 }
-.my-picture{
-    display: flex;
-    width: 210px;
-    height: 210px;
-    border-radius: 50%;
-    border: 1px solid black;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 4px 4px 4px #888888; 
-    margin-top: 60px;
+.my-picture {
+  display: flex;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 4px 4px 4px #888888;
+  margin-top: 60px;
 }
-.aboutMe-text-content{
-    width: auto;
-    width: 900px;
-    text-align: center;
-    font-family:'Courier New', Courier, monospace;
+.aboutMe-text-content {
+  width: auto;
+  width: 900px;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
 }
-.aboutMe-text-content h1{
-    position: relative;
-    font-family: 'Allura', cursive;
-    font-size: 70px;
-    text-align: center;
-    text-shadow: 2px 2px 1px  #888888;
-    width: 610px;
+.aboutMe-text-content h1 {
+  position: relative;
+  font-family: "Allura", cursive;
+  font-size: 70px;
+  text-align: center;
+  text-shadow: 2px 2px 1px #888888;
+  width: 610px;
 }
-.aboutMe-text-content h3{
-    width: 615px;
-    margin-top: 45px;
-    margin-bottom: 45px;
+.aboutMe-text-content h3 {
+  width: 615px;
+  margin-top: 45px;
+  margin-bottom: 45px;
 }
-.aboutMe-text-content p{
-    width: 615px;
+.aboutMe-text-content p {
+  width: 615px;
 }
-.aboutMe-text-content h3 p{
-    position: relative;
-    margin-top: 10px;
-    font-size: large;
+.aboutMe-text-content h3 p {
+  position: relative;
+  margin-top: 10px;
+  font-size: large;
 }
 
-.header-icon a{
-    color: black;
-    margin-left: 15px;
-    margin-right: 15px;
-    
-    
+.header-icon a {
+  color: black;
+  margin-left: 15px;
+  margin-right: 15px;
 }
-.icon-buttons.top{
-    margin-top: -35px;
-    margin-bottom: 20px;
+.icon-buttons.top {
+  margin-top: -35px;
+  margin-bottom: 20px;
 }
 /*-----------------------------------HEADER BAR ENDS---------------------------------*/
 
-
-
-
-
 /*------------------------------Personal Details Section Start---------------------------------*/
 
-.personal-details h2{
-    text-align: center;
-    /*font-family: 'Allura', cursive;*/
-    font-family: 'Rampart One', cursive;
-    font-size: 40px;
-    margin-bottom: 50px;
-   
+.personal-details h2 {
+  text-align: center;
+  /*font-family: 'Allura', cursive;*/
+  font-family: "Rampart One", cursive;
+  font-size: 40px;
+  margin-bottom: 50px;
 }
-.pd-container{
-    display: flex;
-    justify-content: center;
+.pd-container {
+  display: flex;
+  justify-content: center;
 }
 .pd-right,
-.pd-left{
-    margin: 5px;
-    
-    
+.pd-left {
+  margin: 5px;
 }
 
-.pd-theme{
-    display: flex;
-    width: 500px;
-    height: 120px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4px; 
-    box-shadow: 5px 5px 3px #888888;
-    background-color:var(--theme-color1);
-    
+.pd-theme {
+  display: flex;
+  width: 500px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 5px 5px 3px #888888;
+  background-color: var(--theme-color1);
 }
-
 
 /*------------------------------Personal Details Section End---------------------------------*/
 
-
-
-
 /*----------------------------Education section Start-----------------------*/
-.education{
-    position: relative;
-    height: 450px;
-    
+.education {
+  position: relative;
+  height: 450px;
 }
-.education h2{
-    text-align: center;
-    /*font-family: 'Allura', cursive;*/
-    font-family: 'Rampart One', cursive;
-    font-size: 40px;
-    margin-bottom: 50px;
-   
+.education h2 {
+  text-align: center;
+  /*font-family: 'Allura', cursive;*/
+  font-family: "Rampart One", cursive;
+  font-size: 40px;
+  margin-bottom: 50px;
 }
-.education-container{
-    position: relative;
-    display: flex;
-    justify-content: center;
+.education-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 .university,
-.high-school{
-    text-align: center;
-    align-items: center;
-    width: 500px;
-    margin: 5px;
-    /*padding-left: 100px;*/
-    border-radius: 4px;  
-    box-shadow: 5px 5px 3px #888888;
-    background-color:var(--theme-color1);
-    
+.high-school {
+  text-align: center;
+  align-items: center;
+  width: 500px;
+  margin: 5px;
+  /*padding-left: 100px;*/
+  border-radius: 4px;
+  box-shadow: 5px 5px 3px #888888;
+  background-color: var(--theme-color1);
 }
 .high-school li,
-.university li{
-    list-style: none;
+.university li {
+  list-style: none;
 }
 .varsityLogo,
-  .highSchoolLogo {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 60px;
-    width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .varsityLogo img,
-  .highSchoolLogo img {
-    width: 40px;
-    height: 40px;
-    border-radius: 30%;
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-  .university h4,
-  .high-school h4 {
-    margin-bottom: 5px;
-    font-size: 16px;
-  }
-  .university h3,
-  .high-school h3 {
-    font-size: 20px;
-   
-  }
-  .liner-nwu
-  {
-    border: none;
-    background-color: purple;
-    height: 1px;
-    margin: 15px 5%;
-  }
-  .liner-derek
-  {
-    border: none;
-    background-color: rgb(4, 68, 4);
-    height: 1px;
-    margin: 15px 5%;
-  }
-  
- /*----------------------------Education section Ends-----------------------*/
-
-
-
- /*----------------------------Projects section Start-----------------------*/ 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*----------------------------Projects section Ends-----------------------*/ 
-
-
-
-
-
- /*-------------------------------Experience Section---------------------*/
-
- .experience h2{
-    text-align: center;
-    /*font-family: 'Allura', cursive;*/
-    font-family: 'Rampart One', cursive;
-    font-size: 40px;
-    margin-bottom: 50px;
- }
- .experience-container{
-    height: 300px;
-    display: flex;
-    justify-content: center;
- }
-
- .experience-theme{
-    align-items: center;
-    text-align: center;
-    border-radius: 4px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 5px 5px 3px #888888;
-    background-color:var(--theme-color1);
- }
- .row1-experience, .exp1, .exp2{
-    width: 430px;
-    margin: 5px;
- }
- .experience-theme.exp2{
-    height: 281px;
- }
- .experience-theme h3{
-    font-size: 20px;
- }
- .experience-theme h5{
-    font-size: 17px;
- }
- .exp1, .exp2, li{
-    list-style: none;
- }
-
- .exp1 , .exp2{
-    padding: 5px;
- }
-
- /*----------------Experience Section---------------------------*/
-
-
-
-
- /*----------------CERTIFICATIONS AND BADGES SECTION  DETAILS SECTION------------------------------*/
-
- .certificates-badges h2{
-    text-align: center;
-    /*font-family: 'Allura', cursive;*/
-    font-family: 'Rampart One', cursive;
-    font-size: 40px;
-    margin-bottom: 50px;
+.highSchoolLogo {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 60px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.certificates-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.varsityLogo img,
+.highSchoolLogo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 30%;
+  margin-right: 10px;
+  margin-left: 10px;
 }
-.cert{
-    width: 190px;
-    height: 230px;
-    text-align: center;
-    border-radius: 4px;
-    box-shadow: 3px 3px 1px #888888;
-    background-color:var(--theme-color1);
-    margin: 5px; 
+.university h4,
+.high-school h4 {
+  margin-bottom: 5px;
+  font-size: 16px;
 }
-.cert a{
-    color: black;
-    text-decoration: none;
+.university h3,
+.high-school h3 {
+  font-size: 20px;
 }
-.cert img{
-    width: 190px;
-    height: 60px;
-    border-radius: 4px 4px 0 0;
-    padding-bottom: 3px;
-    border-bottom: 1px solid #888888;
+.liner-nwu {
+  border: none;
+  background-color: purple;
+  height: 1px;
+  margin: 15px 5%;
 }
-.cert h3{
-    font-size: 16px;
-    padding-top: 5px;
+.liner-derek {
+  border: none;
+  background-color: rgb(4, 68, 4);
+  height: 1px;
+  margin: 15px 5%;
+}
+
+/*----------------------------Education section Ends-----------------------*/
+
+/*----------------------------Projects section Start-----------------------*/
+
+/*----------------------------Projects section Ends-----------------------*/
+
+/*-------------------------------Experience Section---------------------*/
+
+.experience h2 {
+  text-align: center;
+  /*font-family: 'Allura', cursive;*/
+  font-family: "Rampart One", cursive;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+.experience-container {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.experience-theme {
+  align-items: center;
+  text-align: center;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 5px 5px 3px #888888;
+  background-color: var(--theme-color1);
+}
+.row1-experience,
+.exp1,
+.exp2 {
+  width: 430px;
+  margin: 5px;
+}
+.experience-theme.exp2 {
+  height: 281px;
+}
+.experience-theme h3 {
+  font-size: 20px;
+}
+.experience-theme h5 {
+  font-size: 17px;
+}
+.exp1,
+.exp2,
+li {
+  list-style: none;
+}
+
+.exp1,
+.exp2 {
+  padding: 5px;
+}
+
+/*----------------Experience Section---------------------------*/
+
+/*----------------CERTIFICATIONS AND BADGES SECTION  DETAILS SECTION------------------------------*/
+
+.certificates-badges h2 {
+  text-align: center;
+  /*font-family: 'Allura', cursive;*/
+  font-family: "Rampart One", cursive;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+.certificates-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cert {
+  width: 190px;
+  height: 230px;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 3px 3px 1px #888888;
+  background-color: var(--theme-color1);
+  margin: 5px;
+}
+.cert a {
+  color: black;
+  text-decoration: none;
+}
+.cert img {
+  width: 190px;
+  height: 60px;
+  border-radius: 4px 4px 0 0;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #888888;
+}
+.cert h3 {
+  font-size: 16px;
+  padding-top: 5px;
 }
 .certs-row1,
 .certs-row2,
 .certs-row3,
 .certs-row4,
 .certs-row5,
-.certs-row6{
-    display: flex;
-    justify-content: center;
+.certs-row6 {
+  display: flex;
+  justify-content: center;
 }
-.cert1 img{
-    background-color: rgb(8, 2, 56);
+.cert1 img {
+  background-color: rgb(8, 2, 56);
 }
-.cert2 img{
-    
-    width: 70px;
-
+.cert2 img {
+  width: 70px;
 }
-.cert3 img{
-    width: 180px;
-    margin-right: 5px;
-    margin-left: 5px;
+.cert3 img {
+  width: 180px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
-.cert4 img{
-    width: 120px;
+.cert4 img {
+  width: 120px;
 }
-.ibm img{
-    width: 64px;  
+.ibm img {
+  width: 64px;
 }
-.soloPhoto img{
-    width: 32%;
-    border-radius: 50%;  
+.soloPhoto img {
+  width: 32%;
+  border-radius: 50%;
 }
 
- /*---------------------------------CONTACT SECTION---------------------*/
- .contact h2{
-    text-align: center;
-    font-family: 'Allura', cursive;
-   /*font-family: 'Allura', cursive;*/
-   font-family: 'Rampart One', cursive;
-   font-size: 40px;
-    margin-bottom: 50px;
- }
- .contact-container{
-    display: flex;
-    justify-content: center;
-    
- }
- .contact-left,
- .contact-right{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 500px;
-    text-align: center;
-    margin: 5px;
- }
- .cell,
- .location,
- .email,
- .website{
-    width: 500px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    box-shadow: 5px 5px 3px #888888;
-    background-color:var(--theme-color1);
-    border-radius: 4px;
-    height: 200px;
-    align-items: center;
-    
- }
- .contact-left i,
- .contact-right i{
-    font-size: 25px;
- }
- 
+/*---------------------------------CONTACT SECTION---------------------*/
+.contact h2 {
+  text-align: center;
+  font-family: "Allura", cursive;
+  /*font-family: 'Allura', cursive;*/
+  font-family: "Rampart One", cursive;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+.contact-container {
+  display: flex;
+  justify-content: center;
+}
+.contact-left,
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  text-align: center;
+  margin: 5px;
+}
+.cell,
+.location,
+.email,
+.website {
+  width: 500px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  box-shadow: 5px 5px 3px #888888;
+  background-color: var(--theme-color1);
+  border-radius: 4px;
+  height: 200px;
+  align-items: center;
+}
+.contact-left i,
+.contact-right i {
+  font-size: 25px;
+}
+
 /*-------------------------------------FOOTER-------------------------------*/
-.icon-buttons{
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
-    
+.icon-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
 }
-.icon-buttons, .icon{
-    padding: 15px;
-    
-    font-size: 25px;
+.icon-buttons,
+.icon {
+  padding: 15px;
+
+  font-size: 25px;
 }
-.icon a{
-    text-decoration: none;
-    color: black
-    
+.icon a {
+  text-decoration: none;
+  color: black;
 }
 /*------------------------MEDIA QUERY FOR SMALL SCREENS---------------------*/
 
- @media screen and (max-width: 600px) {
-       
-    .btn{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 15px;
-        width: 250px;
-        margin: 0px 2px 0px 2px;
-    }
-    .navigation-buttons{
-        margin-bottom: 5px; 
-    }
-    .list-buttons{
-        width: auto;
-    }
-    .my-name{
-        margin-top: 30px;
-        width: 350px; 
-        font-size: 50px;
-    }
-    .navigation{
-        width: auto;
-        height: 260px;
-        display: flex;
-        flex-direction: column;
-        margin-top: 20px;
-    }
-    .profile-image{
-        visibility: hidden;
-    }
+@media screen and (max-width: 600px) {
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    width: 250px;
+    margin: 0px 2px 0px 2px;
+  }
+  .navigation-buttons {
+    margin-bottom: 5px;
+  }
+  .list-buttons {
+    width: auto;
+  }
+  .my-name {
+    margin-top: 30px;
+    width: 350px;
+    font-size: 50px;
+  }
+  .navigation {
+    width: auto;
+    height: 260px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .profile-image {
+    visibility: hidden;
+  }
 
-    .social-media-platforms{
-        margin-top: 250px;
-      
-    }
-    hr{
-        margin-top: 50px;
-        margin-bottom: 50px;
-    }
-    .icon{
-        
-        font-size: 25px;
-    }
-    .icon a{
-        margin: -10px;
-    }
+  .social-media-platforms {
+    margin-top: 250px;
+  }
+  hr {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .icon {
+    font-size: 25px;
+  }
+  .icon a {
+    margin: -10px;
+  }
 
-    .detailed-info{
-        font-size: 45px;
-    }
-    .about-section{
-        display: flex;
-        flex-direction: column;
-    }
-    .personal-details{
-        width: 300px;
-    }
-    .details-box{ 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+  .detailed-info {
+    font-size: 45px;
+  }
+  .about-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .personal-details {
+    width: 300px;
+  }
+  .details-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    .education-section, .details-box{
-        width: 10px;
-        margin-right: auto;
-        margin-left: auto;
-    }
-    .experience-section{
-        width: 50px;
-    }
-    .details-box > .part1{
-        background-color: yellowgreen;
-       
-    }
-    .part1, .contact-details p{
-        position: relative;
-        background-color: #888888;
-       
-    }
-  
-    
- }
+  .education-section,
+  .details-box {
+    width: 10px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .experience-section {
+    width: 50px;
+  }
+  .details-box > .part1 {
+    background-color: yellowgreen;
+  }
+  .part1,
+  .contact-details p {
+    position: relative;
+    background-color: #888888;
+  }
+}
