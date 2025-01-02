@@ -1,23 +1,25 @@
-:root {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 body {
+
 }
 
 /*----------TOP NAVIGATION BAR START------------------------------*/
-section {
-  margin-top: 150px;
-  margin-bottom: 50px;
+section {  
+  margin: 60px auto;
 }
 nav {
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: 100px;
 }
 nav ul {
   display: flex;
   justify-content: space-evenly;
-  list-style-type: none;
-  padding: 0;
+  list-style: none;
+
 }
 nav li {
   display: inline;
@@ -31,10 +33,9 @@ nav a {
 }
 .top-heading {
   text-align: center;
-  width: 300px;
-  border-radius: 4px;
   font-family: "Rampart One", cursive;
   font-size: 30px;
+  
 }
 
 /*----------------TOP NAVIGATION BAR ENDS-----------------*/
@@ -46,12 +47,7 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1200px;
-  height: 450px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  justify-content: space-around;
+  
 }
 .my-picture {
   display: flex;
@@ -62,13 +58,12 @@ nav a {
   align-items: center;
   justify-content: center;
   box-shadow: 4px 4px 4px #888888;
-  margin-top: 60px;
+ 
 }
 .aboutMe-text-content {
-  width: auto;
   width: 900px;
   text-align: center;
-  font-family: "Courier New", Courier, monospace;
+  
 }
 .aboutMe-text-content h1 {
   position: relative;
@@ -98,8 +93,8 @@ nav a {
   margin-right: 15px;
 }
 .icon-buttons.top {
-  margin-top: -35px;
-  margin-bottom: 20px;
+  
+  margin: auto;
 }
 /*--------------------HEADER BAR ENDS---------------------------*/
 
@@ -129,7 +124,6 @@ nav a {
   align-items: center;
   border-radius: 4px;
   box-shadow: 5px 5px 3px #888888;
-  background-color: var(--theme-color1);
 }
 
 /*--------------Personal Details Section End-----------------------*/
@@ -382,7 +376,6 @@ li {
 .icon-buttons,
 .icon {
   padding: 15px;
-
   font-size: 25px;
 }
 .icon a {
@@ -390,83 +383,35 @@ li {
   color: black;
 }
 /*------------------------MEDIA QUERY FOR SMALL SCREENS---------------------*/
-
-@media screen and (max-width: 600px) {
-  .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 15px;
-    width: 250px;
-    margin: 0px 2px 0px 2px;
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
   }
-  .navigation-buttons {
-    margin-bottom: 5px;
-  }
-  .list-buttons {
-    width: auto;
-  }
-  .my-name {
-    margin-top: 30px;
-    width: 350px;
-    font-size: 50px;
-  }
-  .navigation {
-    width: auto;
-    height: 260px;
-    display: flex;
+  nav ul {
     flex-direction: column;
-    margin-top: 20px;
   }
-  .profile-image {
-    visibility: hidden;
+  .top-heading {
+    font-size: 24px;
+    width: 100%;
   }
-
-  .social-media-platforms {
-    margin-top: 250px;
+  .aboutMe-text-content h1 {
+    position: relative;
+    font-family: "Allura", cursive;
+    font-size: 35px;
+    text-align: center;
+    text-shadow: 2px 2px 1px #888888;
+    width: 305px;
+    background-color: pink;
   }
-  hr {
-    margin-top: 50px;
-    margin-bottom: 50px;
+  .header-content {
+    flex-direction: column;
   }
+  .icon-buttons,
   .icon {
-    font-size: 25px;
+    padding: 10px;
+    font-size: 20px;
   }
   .icon a {
-    margin: -10px;
-  }
-
-  .detailed-info {
-    font-size: 45px;
-  }
-  .about-section {
-    display: flex;
-    flex-direction: column;
-  }
-  .personal-details {
-    width: 300px;
-  }
-  .details-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .education-section,
-  .details-box {
-    width: 10px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  .experience-section {
-    width: 50px;
-  }
-  .details-box > .part1 {
-    background-color: yellowgreen;
-  }
-  .part1,
-  .contact-details p {
-    position: relative;
-    background-color: #888888;
+    font-size: 18px;
   }
 }
