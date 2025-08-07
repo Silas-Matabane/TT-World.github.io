@@ -5,6 +5,7 @@
   --dark-color: #212529;
   --light-color: #f8f9fa;
   --navbar-color: #0C2043;
+  --accent-color: #f72585;
   --font-primary: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-secondary: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-accent: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -134,6 +135,175 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-3px);
 }
 
+/* About Section Styles */
+.about-container {
+  max-width: 1200px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.about-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--navbar-color));
+  color: white;
+  padding: 40px;
+  position: relative;
+}
+
+.about-profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.name-title {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.tagline {
+  font-weight: 300;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+.about-content {
+  padding: 40px;
+}
+
+.about-section-title {
+  position: relative;
+  margin-bottom: 30px;
+  color: var(--navbar-color);
+  font-weight: 600;
+}
+
+.about-section-title:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-color);
+}
+
+.personality-card {
+  background: var(--light-color);
+  border-radius: 10px;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-left: 4px solid var(--primary-color);
+  transition: transform 0.3s ease;
+}
+
+.personality-card:hover {
+  transform: translateY(-5px);
+}
+
+.trait-item {
+  margin-bottom: 15px;
+  padding-left: 30px;
+  position: relative;
+}
+
+.trait-item i {
+  position: absolute;
+  left: 0;
+  top: 3px;
+  color: var(--primary-color);
+}
+
+.experience-item, .education-item {
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px dashed #ddd;
+}
+
+.experience-item:last-child, .education-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.company, .degree {
+  font-weight: 600;
+  color: var(--navbar-color);
+}
+
+.position, .institution {
+  font-weight: 500;
+}
+
+.duration {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.highlight-box {
+  background: linear-gradient(135deg, rgba(19, 35, 60, 0.1), rgba(12, 32, 67, 0.1));
+  border-radius: 10px;
+  padding: 30px;
+  margin: 30px 0;
+  border-left: 4px solid var(--accent-color);
+}
+
+.btn-custom {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  background: var(--navbar-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(12, 32, 67, 0.2);
+}
+
+.btn-outline-custom {
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  background: transparent;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
 /* Cards */
 .card {
   border: none;
@@ -195,6 +365,15 @@ h1, h2, h3, h4, h5, h6 {
   
   .social-icons {
     justify-content: center;
+  }
+  
+  .about-header {
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .about-content {
+    padding: 30px 20px;
   }
 }
 
