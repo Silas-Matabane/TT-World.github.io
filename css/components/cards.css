@@ -1,0 +1,195 @@
+/* Tech icons */
+:root {
+  --tech-icon-size: 40px; /* <-- set desired size here */
+  --tech-icon-gap: 1.2rem; /* increased gap between tech items */
+  --tech-track-speed: 8s; /* smaller = faster */
+}
+
+/* Cards / Project Cards */
+.project-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform .3s ease, box-shadow .3s ease;
+  background: #ffffff; /* changed to white */
+  color: var(--dark-color);
+}
+
+/* Force project card background to ensure no other rule overrides it */
+.nightsky-bg .project-card,
+#projects .project-card,
+.project-card {
+  background: #ffffff !important; /* enforce white */
+  color: var(--dark-color) !important;
+}
+
+/* Card hover */
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.15);
+}
+
+.project-card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Explore button — adjusted for lighter card background (no color clash) */
+.project-card .btn-outline-primary {
+  display: inline-flex !important;     /* ensure flex layout inside button */
+  align-items: center !important;      /* vertical centering of content */
+  justify-content: center !important;  /* horizontal centering of content */
+  text-align: center !important;
+  padding: 0.5rem 0.9rem;               /* keep desired size */
+  min-width: 200px;
+  max-width: 260px;
+  width: auto;
+  align-self: center !important;       /* center the button horizontally in the flex column card-body */
+  box-sizing: border-box;
+
+  /* Use the dark/navy color for border and text so it contrasts on the light card */
+  border: 2px solid var(--navbar-color);
+  color: var(--navbar-color);
+  background: transparent;
+
+  transition: background 180ms ease, color 180ms ease, transform 120ms ease, box-shadow 180ms ease;
+
+  /* increased space above the Explore button */
+  margin-top: 2.5rem;
+}
+
+/* Hover / focus states — fill with dark color and white text */
+.project-card .btn-outline-primary:hover,
+.project-card .btn-outline-primary:focus {
+  background: var(--navbar-color);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(12,32,67,0.18);
+}
+
+/* Ensure the larger rounded style applies even when Bootstrap's .btn-sm reduces padding */
+.project-card .btn-outline-primary.btn-sm {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Optional: make the button stand out when card is inside nightsky-bg as well */
+.nightsky-bg .project-card .btn-outline-primary {
+  border-color: var(--navbar-color);
+  color: var(--navbar-color);
+}
+
+
+.project-card .tech-icon {
+  width: var(--tech-icon-size) !important;
+  height: var(--tech-icon-size) !important;
+  max-width: none !important;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  background: transparent;
+  padding: 0;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.25));
+  transition: transform .15s ease, filter .15s ease, opacity .12s ease;
+}
+
+/* Card body padding adjustment */
+.project-card .card-body {
+  padding: 1.5rem; /* increased spacing inside the card */
+}
+
+/* slightly larger hit area and focusable */x; /* increased padding around each tech item */
+.project-card .tech-item {
+  flex: 0 0 auto;
+  text-align: center;
+  min-width: calc(var(--tech-icon-size) + 36px);
+  padding: 12px 10px; /* increased padding around each tech item */
+}
+
+/* label under icon */
+.project-card .tech-label {
+  color: var(--navbar-color);
+  font-size: 0.80rem;
+  margin-top: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* hover / focus effects */
+.project-card .tech-icon:hover,
+.project-card .tech-item:focus-within .tech-icon {
+  transform: translateY(-3px) scale(1.06);
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.28));
+  opacity: 1;
+}
+
+/* make icon containers keyboard accessible */
+.project-card .tech-item a,
+.project-card .tech-item button {
+  display: inline-block;
+  outline: none;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* visible focus ring for keyboard users */
+.project-card .tech-item a:focus .tech-icon,
+.project-card .tech-item button:focus .tech-icon {
+  box-shadow: 0 0 0 3px rgba(12,32,67,0.12);
+  transform: translateY(-2px);
+}
+
+/* improve track config via variables */
+.tech-track {
+  display: flex;
+  gap: var(--tech-icon-gap);
+  align-items: center;
+  flex-wrap: nowrap;
+  animation: scroll-right var(--tech-track-speed) linear infinite;
+  will-change: transform;
+}
+
+/* pause on hover/focus for readability */
+.tech-track:hover,
+.tech-track:focus-within {
+  animation-play-state: paused;
+}
+
+/* tooltip (title-like) style for touch/desktop */
+.project-card .tech-item [data-tooltip] {
+  position: relative;
+}
+.project-card .tech-item [data-tooltip]:hover::after,
+.project-card .tech-item [data-tooltip]:focus::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(var(--tech-icon-size) + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(12,32,67,0.95);
+  color: #fff;
+  padding: 6px 8px;
+  font-size: 0.75rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  z-index: 50;
+  pointer-events: none;
+}
+
+/* responsive tweak: reduce size on small screens */
+@media (max-width: 420px) {
+  :root { --tech-icon-size: 34px; --tech-icon-gap: 0.6rem; }
+}
+
+/* update keyframes to use variable duration */
+@keyframes scroll-right {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+/* smaller screens: slow down and keep visible */
+@media (max-width: 576px) {
+  .tech-track { animation-duration: 28s; gap: 0.6rem; }
+}

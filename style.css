@@ -211,6 +211,55 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 10px 20px rgba(215, 186, 137, 0.3);
 }
 
+/* Make footer social icons identical to hero social icons */
+footer .social-icons,
+.hero-section .social-icons {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+footer .social-icons a {
+  /* match the hero .social-icons a size & styling */
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+/* hover behavior same as hero */
+footer .social-icons a:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 20px rgba(215, 186, 137, 0.3);
+}
+
+/* ensure icon <i> sizing matches */
+footer .social-icons a i {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+/* small-screen tweak to match hero behavior */
+@media (max-width: 420px) {
+  footer .social-icons a,
+  .hero-section .social-icons a {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+}
+
 /* Add smooth scroll behavior */
 html {
   scroll-behavior: smooth;
@@ -398,19 +447,26 @@ html {
 }
 
 /* Cards */
-.card {
+.project-card {
   border: none;
-  transition: all 0.3s ease;
-  border-radius: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform .3s ease, box-shadow .3s ease;
+  background: #d7ba89; /* ensure cards use requested color */
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+/* If Projects section had its own override, ensure it matches */
+.nightsky-bg .project-card {
+  background: #d7ba89; /* keep consistent on nightsky section */
+  color: var(--dark-color);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.35);
 }
 
-.card-body {
-  padding: 2rem;
+/* Make card text darker for readability on the new background */
+.project-card .card-title,
+.project-card .card-text,
+.project-card .tech-label {
+  color: var(--navbar-color) !important;
 }
 
 /* Back to Top Button */
@@ -441,7 +497,7 @@ html {
   border-radius: 12px;
   overflow: hidden;
   transition: transform .3s ease, box-shadow .3s ease;
-  background: #fff;
+  background: #d7ba89; /* ensure cards use requested color */
 }
 
 .project-card:hover {
@@ -454,9 +510,85 @@ html {
   object-fit: cover;
 }
 
+/* Custom style for the Explore button on project cards */
+.project-card .btn-outline-primary {
+  min-height: 48px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s;
+}
+
 .project-card .btn-outline-primary {
   border-color: var(--accent-color);
   color: var(--accent-color);
+}
+
+/* Make Explore button on project cards larger and more rounded */
+.project-card .btn-outline-primary,
+.nightsky-bg .btn-outline-primary {
+  min-height: 56px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: 2.5rem;
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* Tech stack icons inside project cards (40x40) */
+.project-card .tech-icon {
+  background: transparent;
+  border-radius: 6px;
+  padding: 0;
+  display: block;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.35));
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+/* Font Awesome fallback icon styled like the images */
+.project-card .tech-icon-fa {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  color: #ffffff;
+  background: transparent;
+  border-radius: 6px;
+  margin: 0 auto;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.35));
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+/* Hover effect for both image and FA icons */
+.project-card .tech-icon:hover,
+.project-card .tech-icon-fa:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.45));
+}
+
+/* tech item layout */
+.project-card .tech-item {
+  min-width: 60px;
+  text-align: center;
+}
+
+/* Tech label under each icon */
+.project-card .tech-label {
+  color: #fff;
+  font-size: 0.85rem;
+  margin-top: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Add these keyframe animations */
@@ -529,6 +661,604 @@ html {
   50% {
     transform: translateY(-10px);
   }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .hero-section {
+   
+    text-align: center;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.8rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .profile-img {
+    width: 250px;
+    height: 250px;
+    margin-top: 2rem;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+  
+  .about-header {
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .about-content {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .navbar-logo {
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 60px 0;
+  }
+  
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+}
+
+/* Force primary font across site (override other rules) */
+html, body, p, a, li, span, div, input, textarea, button, h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary) !important;
+}
+
+/* Add these styles for the starry night effect */
+
+/* Hero Section with Stars */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+  background: linear-gradient(to bottom, #0a0a23 0%, #1a1a2e 50%, #16213e 100%);
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Stars Container */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Individual Star */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite;
+}
+
+/* Different star sizes */
+.star.small {
+  width: 1px;
+  height: 1px;
+}
+
+.star.medium {
+  width: 2px;
+  height: 2px;
+}
+
+.star.large {
+  width: 3px;
+  height: 3px;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+/* Twinkling animations */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Different animation speeds for variety */
+.star:nth-child(2n) {
+  animation-duration: 1.5s;
+}
+
+.star:nth-child(3n) {
+  animation-duration: 2.5s;
+}
+
+.star:nth-child(4n) {
+  animation-duration: 3s;
+}
+
+.star:nth-child(5n) {
+  animation-duration: 1.8s;
+}
+
+/* Ensure content appears above stars */
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Update existing hero section styles */
+.hero-section h1 {
+  font-family: var(--font-primary);
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+  animation: fadeInLeft 1s ease-out;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  animation: fadeInLeft 1s ease-out 0.2s both;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .lead {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  animation: fadeInUp 1s ease-out 0.4s both;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .text-primary {
+  color: var(--accent-color) !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced profile image for night theme */
+.profile-img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border: 4px solid #d7ba89;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(215, 186, 137, 0.2);
+  transition: all 0.3s ease;
+  animation: zoomIn 1s ease-out 0.6s both;
+  opacity: 1;
+}
+
+.profile-img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(215, 186, 137, 0.3);
+}
+
+/* Night Sky Background for Projects Section */
+.nightsky-bg {
+  background: #0a1833;
+  position: relative;
+  overflow: hidden;
+}
+
+.nightsky-bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#projects .container,
+#projects .section-title,
+#projects .project-card {
+  position: relative;
+  z-index: 1;
+}
+
+/* Make text in the Projects section white and visible on dark background */
+.nightsky-bg,
+.nightsky-bg .section-title,
+.nightsky-bg .card-title,
+.nightsky-bg .card-text,
+.nightsky-bg .btn,
+.nightsky-bg .btn-outline-primary {
+  color: #fff !important;
+}
+
+.nightsky-bg .project-card {
+  /* lighter card that still sits above the night background */
+  background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.08));
+  color: var(--dark-color);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.35);
+}
+
+.nightsky-bg .project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.15);
+}
+
+.nightsky-bg .project-card .card-title {
+  color: var(--navbar-color) !important;
+}
+
+.nightsky-bg .project-card .card-text {
+  color: rgba(8, 20, 34, 0.9) !important; /* near-black for good contrast */
+}
+
+.nightsky-bg .project-card .tech-label {
+  color: var(--dark-color);
+}
+
+/* make the Explore button use a darker text color with accent border */
+.nightsky-bg .project-card .btn-outline-primary {
+  border-color: var(--accent-color);
+  color: var(--dark-color) !important;
+  background: transparent;
+}
+
+/* hover state for the Explore button */
+.nightsky-bg .project-card .btn-outline-primary:hover {
+  background: var(--accent-color);
+  color: #0a1833 !important;
+  border-color: var(--accent-color);
+}
+
+/* ensure icons remain visible on the lighter card (undo heavy inversion) */
+.nightsky-bg .project-card .tech-icon,
+.nightsky-bg .project-card .tech-icon-fa {
+  filter: none;
+  opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .hero-section {
+   
+    text-align: center;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.8rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .profile-img {
+    width: 250px;
+    height: 250px;
+    margin-top: 2rem;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+  
+  .about-header {
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .about-content {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .navbar-logo {
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 60px 0;
+  }
+  
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+}
+
+/* Force primary font across site (override other rules) */
+html, body, p, a, li, span, div, input, textarea, button, h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary) !important;
+}
+
+/* Add these styles for the starry night effect */
+
+/* Hero Section with Stars */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+  background: linear-gradient(to bottom, #0a0a23 0%, #1a1a2e 50%, #16213e 100%);
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Stars Container */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Individual Star */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite;
+}
+
+/* Different star sizes */
+.star.small {
+  width: 1px;
+  height: 1px;
+}
+
+.star.medium {
+  width: 2px;
+  height: 2px;
+}
+
+.star.large {
+  width: 3px;
+  height: 3px;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+/* Twinkling animations */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Different animation speeds for variety */
+.star:nth-child(2n) {
+  animation-duration: 1.5s;
+}
+
+.star:nth-child(3n) {
+  animation-duration: 2.5s;
+}
+
+.star:nth-child(4n) {
+  animation-duration: 3s;
+}
+
+.star:nth-child(5n) {
+  animation-duration: 1.8s;
+}
+
+/* Ensure content appears above stars */
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Update existing hero section styles */
+.hero-section h1 {
+  font-family: var(--font-primary);
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+  animation: fadeInLeft 1s ease-out;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  animation: fadeInLeft 1s ease-out 0.2s both;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .lead {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  animation: fadeInUp 1s ease-out 0.4s both;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .text-primary {
+  color: var(--accent-color) !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced profile image for night theme */
+.profile-img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border: 4px solid #d7ba89;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(215, 186, 137, 0.2);
+  transition: all 0.3s ease;
+  animation: zoomIn 1s ease-out 0.6s both;
+  opacity: 1;
+}
+
+.profile-img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(215, 186, 137, 0.3);
+}
+
+/* Night Sky Background for Projects Section */
+.nightsky-bg {
+  background: #0a1833;
+  position: relative;
+  overflow: hidden;
+}
+
+.nightsky-bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#projects .container,
+#projects .section-title,
+#projects .project-card {
+  position: relative;
+  z-index: 1;
+}
+
+/* Make text in the Projects section white and visible on dark background */
+.nightsky-bg,
+.nightsky-bg .section-title,
+.nightsky-bg .card-title,
+.nightsky-bg .card-text,
+.nightsky-bg .btn,
+.nightsky-bg .btn-outline-primary {
+  color: #fff !important;
+}
+
+.nightsky-bg .project-card {
+  /* lighter card that still sits above the night background */
+  background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.08));
+  color: var(--dark-color);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.35);
+}
+
+.nightsky-bg .project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.15);
+}
+
+.nightsky-bg .project-card .card-title {
+  color: var(--navbar-color) !important;
+}
+
+.nightsky-bg .project-card .card-text {
+  color: rgba(8, 20, 34, 0.9) !important; /* near-black for good contrast */
+}
+
+.nightsky-bg .project-card .tech-label {
+  color: var(--dark-color);
+}
+
+/* make the Explore button use a darker text color with accent border */
+.nightsky-bg .project-card .btn-outline-primary {
+  border-color: var(--accent-color);
+  color: var(--dark-color) !important;
+  background: transparent;
+}
+
+/* hover state for the Explore button */
+.nightsky-bg .project-card .btn-outline-primary:hover {
+  background: var(--accent-color);
+  color: #0a1833 !important;
+  border-color: var(--accent-color);
+}
+
+/* ensure icons remain visible on the lighter card (undo heavy inversion) */
+.nightsky-bg .project-card .tech-icon,
+.nightsky-bg .project-card .tech-icon-fa {
+  filter: none;
+  opacity: 1;
 }
 
 /* Responsive Adjustments */
@@ -744,4 +1474,457 @@ html {
 .profile-img:hover {
   transform: scale(1.05) rotate(2deg);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(215, 186, 137, 0.3);
+}
+
+/* Night Sky Background for Projects Section */
+.nightsky-bg {
+  background: #0a1833;
+  position: relative;
+  overflow: hidden;
+}
+
+.nightsky-bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#projects .container,
+#projects .section-title,
+#projects .project-card {
+  position: relative;
+  z-index: 1;
+}
+
+/* Make text in the Projects section white and visible on dark background */
+.nightsky-bg,
+.nightsky-bg .section-title,
+.nightsky-bg .card-title,
+.nightsky-bg .card-text,
+.nightsky-bg .btn,
+.nightsky-bg .btn-outline-primary {
+  color: #fff !important;
+}
+
+.nightsky-bg .project-card {
+  /* lighter card that still sits above the night background */
+  background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.08));
+  color: var(--dark-color);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.35);
+}
+
+.nightsky-bg .project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.15);
+}
+
+.nightsky-bg .project-card .card-title {
+  color: var(--navbar-color) !important;
+}
+
+.nightsky-bg .project-card .card-text {
+  color: rgba(8, 20, 34, 0.9) !important; /* near-black for good contrast */
+}
+
+.nightsky-bg .project-card .tech-label {
+  color: var(--dark-color);
+}
+
+/* make the Explore button use a darker text color with accent border */
+.nightsky-bg .project-card .btn-outline-primary {
+  border-color: var(--accent-color);
+  color: var(--dark-color) !important;
+  background: transparent;
+}
+
+/* hover state for the Explore button */
+.nightsky-bg .project-card .btn-outline-primary:hover {
+  background: var(--accent-color);
+  color: #0a1833 !important;
+  border-color: var(--accent-color);
+}
+
+/* ensure icons remain visible on the lighter card (undo heavy inversion) */
+.nightsky-bg .project-card .tech-icon,
+.nightsky-bg .project-card .tech-icon-fa {
+  filter: none;
+  opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .hero-section {
+   
+    text-align: center;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.8rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .profile-img {
+    width: 250px;
+    height: 250px;
+    margin-top: 2rem;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+  
+  .about-header {
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .about-content {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .navbar-logo {
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 60px 0;
+  }
+  
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+}
+
+/* Add these styles for the starry night effect */
+
+/* Hero Section with Stars */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 0;
+  background: linear-gradient(to bottom, #0a0a23 0%, #1a1a2e 50%, #16213e 100%);
+  color: white;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Stars Container */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Individual Star */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite;
+}
+
+/* Different star sizes */
+.star.small {
+  width: 1px;
+  height: 1px;
+}
+
+.star.medium {
+  width: 2px;
+  height: 2px;
+}
+
+.star.large {
+  width: 3px;
+  height: 3px;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
+}
+
+/* Twinkling animations */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+/* Different animation speeds for variety */
+.star:nth-child(2n) {
+  animation-duration: 1.5s;
+}
+
+.star:nth-child(3n) {
+  animation-duration: 2.5s;
+}
+
+.star:nth-child(4n) {
+  animation-duration: 3s;
+}
+
+.star:nth-child(5n) {
+  animation-duration: 1.8s;
+}
+
+/* Ensure content appears above stars */
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Update existing hero section styles */
+.hero-section h1 {
+  font-family: var(--font-primary);
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+  animation: fadeInLeft 1s ease-out;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  animation: fadeInLeft 1s ease-out 0.2s both;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .lead {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  animation: fadeInUp 1s ease-out 0.4s both;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .text-primary {
+  color: var(--accent-color) !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced profile image for night theme */
+.profile-img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border: 4px solid #d7ba89;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 20px rgba(215, 186, 137, 0.2);
+  transition: all 0.3s ease;
+  animation: zoomIn 1s ease-out 0.6s both;
+  opacity: 1;
+}
+
+.profile-img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(215, 186, 137, 0.3);
+}
+
+/* Night Sky Background for Projects Section */
+.nightsky-bg {
+  background: #0a1833;
+  position: relative;
+  overflow: hidden;
+}
+
+.nightsky-bg::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+#projects .container,
+#projects .section-title,
+#projects .project-card {
+  position: relative;
+  z-index: 1;
+}
+
+/* Make text in the Projects section white and visible on dark background */
+.nightsky-bg,
+.nightsky-bg .section-title,
+.nightsky-bg .card-title,
+.nightsky-bg .card-text,
+.nightsky-bg .btn,
+.nightsky-bg .btn-outline-primary {
+  color: #fff !important;
+}
+
+.nightsky-bg .project-card {
+  /* lighter card that still sits above the night background */
+  background: linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.08));
+  color: var(--dark-color);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.35);
+}
+
+.nightsky-bg .project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.15);
+}
+
+.nightsky-bg .project-card .card-title {
+  color: var(--navbar-color) !important;
+}
+
+.nightsky-bg .project-card .card-text {
+  color: rgba(8, 20, 34, 0.9) !important; /* near-black for good contrast */
+}
+
+.nightsky-bg .project-card .tech-label {
+  color: var(--dark-color);
+}
+
+/* make the Explore button use a darker text color with accent border */
+.nightsky-bg .project-card .btn-outline-primary {
+  border-color: var(--accent-color);
+  color: var(--dark-color) !important;
+  background: transparent;
+}
+
+/* hover state for the Explore button */
+.nightsky-bg .project-card .btn-outline-primary:hover {
+  background: var(--accent-color);
+  color: #0a1833 !important;
+  border-color: var(--accent-color);
+}
+
+/* ensure icons remain visible on the lighter card (undo heavy inversion) */
+.nightsky-bg .project-card .tech-icon,
+.nightsky-bg .project-card .tech-icon-fa {
+  filter: none;
+  opacity: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .hero-section {
+   
+    text-align: center;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.8rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .profile-img {
+    width: 250px;
+    height: 250px;
+    margin-top: 2rem;
+  }
+  
+  .social-icons {
+    justify-content: center;
+  }
+  
+  .about-header {
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .about-content {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 1.5rem;
+  }
+  
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .navbar-logo {
+    height: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 60px 0;
+  }
+  
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
 }
