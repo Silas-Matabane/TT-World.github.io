@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Random animation delay
             star.style.animationDelay = Math.random() * 3 + 's';
-            
             starsContainer.appendChild(star);
         }
         
@@ -54,8 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 70,
-                    behavior: 'smooth'
+                    top: targetElement.offsetTop - 70,  behavior: 'smooth'
                 });
             }
         });

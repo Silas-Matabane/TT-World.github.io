@@ -435,6 +435,30 @@ html {
   visibility: visible;
 }
 
+/* ----- Projects Section Overrides ----- */
+.project-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform .3s ease, box-shadow .3s ease;
+  background: #fff;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.15);
+}
+
+.project-card img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card .btn-outline-primary {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
 /* Add these keyframe animations */
 @keyframes fadeInUp {
   from {
